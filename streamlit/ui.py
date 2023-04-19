@@ -10,7 +10,7 @@ import requests
 import streamlit as st
 
 # interact with FastAPI endpoint
-API_HOST = '127.0.0.1'
+API_HOST = 'backend'
 API_PORT = 8500
 backend = f'http://{API_HOST}:{API_PORT}'
 
