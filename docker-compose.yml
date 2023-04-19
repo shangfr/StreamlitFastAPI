@@ -5,6 +5,8 @@ services:
     build: fastapi/
     ports: 
       - 8500:8500
+    volumes:
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/fastapi:/fastapi_server
     networks:
       - deploy_network
     container_name: backend
@@ -15,6 +17,8 @@ services:
       - fastapi
     ports: 
         - 8501:8501
+    volumes:
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/streamlit:/streamlit_ui
     networks:
       - deploy_network
     container_name: frontend
