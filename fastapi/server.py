@@ -20,11 +20,11 @@ app = FastAPI()
 
 
 @app.get("/")
-def read_root():
+async def read_root():
     return {"Hello": "World"}
 
 
 @app.post("/calculate")
-def operate(uinput: UserInput):
-    result = calculate(uinput.operation, uinput.x, uinput.y)
+async def operate(uinput: UserInput):
+    result = await calculate(uinput.operation, uinput.x, uinput.y)
     return result

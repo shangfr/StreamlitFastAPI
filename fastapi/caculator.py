@@ -6,7 +6,7 @@ Created on Wed Apr 19 15:04:46 2023
 """
 
 
-def calculate(operation, x, y):
+async def calculate(operation, x, y):
     ''' 
     Parameters
     ----------
